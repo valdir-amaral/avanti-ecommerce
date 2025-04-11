@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanti</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="banner-warning bg-primary">
+            Ganhe <span class="destaque">R$10,00</span> de desconto no seu primeiro pedido. Utilize o cupom DESCONTO10
+        </div>
+        <div class="container">
+            <nav class="navbar">
+                <a data-aos="fade-right" class="navbar-brand" href="/">
+                    <img src="assets/img/logo.svg" alt="Logo da Avanti">
+                </a>
+                <div data-aos="fade-down" data-aos-delay="100" class="w-100 input-wrapper">
+                    <input onkeydown="search(event)" id="search-input" type="text" placeholder="Digite aqui o que você procura">
+                    <img onclick="search(event)" class="icon" src="assets/img/icons/search-icon.svg" alt="">
+                </div>
+
+                <div data-aos="fade-down" data-aos-delay="200" class="profile-info d-flex align-items-center gap-2">  
+                    <img src="assets/img/icons/person-icon.svg" alt="">
+                    <span>Olá, <br> Nome cliente!</span>
+                </div>
+
+                <a data-aos="fade-left" data-aos-delay="300" href="#" class="cart-link">
+                    <span class="cart-indicator">2</span>
+                    <img src="assets/img/icons/cart-icon.svg" alt="">
+                </a>
+                <ul data-aos="fade-right" data-aos-delay="500" class="categories">
+                    <li>
+                        <a class="navbar-link" href="">Todas as categorias</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                    <li>
+                        <a class="navbar-link" href="">Departamento</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="main-hero" data-aos="zoom-in" data-aos-delay="600">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="assets/img/hero-img.jpg" alt="">
+                    </div>
+                    <div class="col-6 my-auto">
+                        <h1 class="font-nunito main-title">SUPER<span class="fw-light">SALE</span></h1>
+                        <p class="font-nunito main-desc">Itens selecionados com até</p>
+                        <p class="font-nunito discount">
+                            50%OFF
+                        </p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <section id="products-section">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <h2>Lançamentos</h2>
+                    <a class="ms-auto" href="#">Ver mais</a>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <span class="pill-new">Novo</span>
+                                    <img src="assets/img/product.jpg" alt="">
+                                </div>
+                                <h3 class="product-name">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+                                <p class="product-old-price">R$ 100,00</p>
+                                <p class="product-price">R$79,90</p>
+                                <p class="product-parcel">Ou em até <b>10x de R$ 7,90</b></p>
+
+                                <a class="button" href="#">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <span class="pill-new">Novo</span>
+                                    <img src="assets/img/product.jpg" alt="">
+                                </div>
+                                <h3 class="product-name">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+                                <p class="product-old-price">R$ 100,00</p>
+                                <p class="product-price">R$79,90</p>
+                                <p class="product-parcel">Ou em até <b>10x de R$ 7,90</b></p>
+
+                                <a class="button" href="#">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <span class="pill-new">Novo</span>
+                                    <img src="assets/img/product.jpg" alt="">
+                                </div>
+                                <h3 class="product-name">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+                                <p class="product-old-price">R$ 100,00</p>
+                                <p class="product-price">R$79,90</p>
+                                <p class="product-parcel">Ou em até <b>10x de R$ 7,90</b></p>
+
+                                <a class="button" href="#">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <span class="pill-new">Novo</span>
+                                    <img src="assets/img/product.jpg" alt="">
+                                </div>
+                                <h3 class="product-name">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+                                <p class="product-old-price">R$ 100,00</p>
+                                <p class="product-price">R$79,90</p>
+                                <p class="product-parcel">Ou em até <b>10x de R$ 7,90</b></p>
+
+                                <a class="button" href="#">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <span class="pill-new">Novo</span>
+                                    <img src="assets/img/product.jpg" alt="">
+                                </div>
+                                <h3 class="product-name">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+                                <p class="product-old-price">R$ 100,00</p>
+                                <p class="product-price">R$79,90</p>
+                                <p class="product-parcel">Ou em até <b>10x de R$ 7,90</b></p>
+
+                                <a class="button" href="#">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <span class="pill-new">Novo</span>
+                                    <img src="assets/img/product.jpg" alt="">
+                                </div>
+                                <h3 class="product-name">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+                                <p class="product-old-price">R$ 100,00</p>
+                                <p class="product-price">R$79,90</p>
+                                <p class="product-parcel">Ou em até <b>10x de R$ 7,90</b></p>
+
+                                <a class="button" href="#">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <span class="pill-new">Novo</span>
+                                    <img src="assets/img/product.jpg" alt="">
+                                </div>
+                                <h3 class="product-name">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit</h3>
+                                <p class="product-old-price">R$ 100,00</p>
+                                <p class="product-price">R$79,90</p>
+                                <p class="product-parcel">Ou em até <b>10x de R$ 7,90</b></p>
+
+                                <a class="button" href="#">Comprar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="mug-presentation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="banner-mug">
+
+                            <img class="m-auto" src="assets/img/mug-img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-auto">
+                        <div class="my-auto">
+                            <h2>Lorem Ipsum</h2>
+                            <p>
+                                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                            </p>
+                            <p>
+                                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800
+        })
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 17,
+            slidesPerView: 5,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true
+            },
+        })
+    </script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
