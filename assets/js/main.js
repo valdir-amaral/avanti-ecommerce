@@ -42,11 +42,9 @@ function addToCart(ev) {
             </div>
         `;
 
-        // Cria um elemento temporário para inserir o HTML
         const temp = document.createElement('div');
         temp.innerHTML = toastHTML;
 
-        // Adiciona o toast ao body
         document.body.appendChild(temp.firstElementChild);
 
         btnSelected.setAttribute('disabled',false);

@@ -382,11 +382,41 @@ form {
     gap: 24px;
     align-items: center;
     display: flex;
+    padding: 64px 115px;
+    border-radius: 8px;
+    background-color: #DEDEDE;
 }
 form input {
     max-width: 280px;
 }
-
+form button {
+    max-width: 121px !important;
+}
+form input[type="text"],
+form input[type="email"] {
+    padding: 15px 24px !important;
+    height: unset;
+}
+form fieldset label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #656565 !important;
+}
+form fieldset label a {
+    color: inherit;
+}
+#form-section {
+    padding-top: 64px;
+    padding-bottom: 40px;
+}
+#form-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+#form-section h2 span {
+    color: #005CFF;
+}
 /* HTML: <div class="loader"></div> */
 .loader-product {
     width: 20px;
@@ -414,4 +444,17 @@ form input {
     z-index: 100;
     opacity: 1 !important;
     background-color: white !important;
+  }
+
+  footer {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #F5F5F5;
+  }
+
+  footer .brands-wrapper {
+    margin-top: 67px;
+    display: flex;
+    gap: 34px;
+    justify-content: center;
   }

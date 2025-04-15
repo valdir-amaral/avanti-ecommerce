@@ -497,20 +497,69 @@
         </section>
 
         <section id="form-section">
-            <h2>Cadastre-se na nossa newsletter</h2>
-
-            <form action="">
-                <input placeholder="Digite seu nome" type="text" name="name">
-                <input placeholder="Digite seu e-mail" type="email">
-                <input type="checkbox">
-                <label for="">Estou de acordo com a Política de Privacidade</label>
-                <button class="button">Cadastrar</button>
-            </form>
+            <div class="container">
+                <h2 class="text-center">Cadastre-se na nossa <span>newsletter</span></h2>
+                <form action="">
+                    <input placeholder="Digite seu nome" type="text" name="name">
+                    <input placeholder="Digite seu e-mail" type="email">
+                    <fieldset class="d-flex gap-2">
+                        <input id="policy" name="policy" type="checkbox">
+                        <label for="policy">Estou de acordo com a <a href="#">Política de Privacidade</a></label>
+                    </fieldset>
+                    <button class="button">Cadastrar</button>
+                </form>
+            </div>
+            
         </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="./assets/img/logo.svg" alt="">
+                </div>
+                <div class="col-md-3">
+                    <h4>Institucional</h4>
+                    <h5>Sobre nós</h5>
+                    <h5>Nossas lojas</h5>
+                    <h5>Privacidade e Segurança</h5>
+                    <h5>Termos e condições</h5>
+                </div>
+                <div class="col-md-3">
+                    <h4>Central de ajuda</h4>
+                    <h5>Fale Conosco</h5>
+                    <h5>Frete e Entrega</h5>
+                    <h5>Trocas e Devoluções</h5>
+                    <h5>Formas de Pagamento</h5>
+                    <h5>FAQ</h5>
+                </div>
+                <div class="col-md-3">
+                    <h4>Atendimento</h4>
+                    <h5>Telefone: (00) 1234-5678</h5>
+                    <h5>E-mail: exemplo@exemplo.com.br</h5>
+                    <h5>Horário de atendimento:</h5>
+                    <p>Segunda a Sábado: 07h00 às 23h00</p>
+                    <p>Domingos e Feriados: 07h00 às 21h00</p>
+                </div>
+                <div class="col-12 brands-wrapper">
+                    <img src="./assets/img/icons/amex-icon.svg" alt="">
+                    <img src="./assets/img/icons/master-icon.svg" alt="">
+                    <img src="./assets/img/icons/visa-icon.svg" alt="">
+                    <img src="./assets/img/icons/hipercard-icon.svg" alt="">
+                    <img src="./assets/img/icons/elo-icon.svg" alt="">
+                    <img src="./assets/img/icons/b-icon.svg" alt="">
+                    <img src="./assets/img/icons/paypal-icon.svg" alt="">
+                    <img src="./assets/img/icons/pix-icon.svg" alt="">
+                    <img src="./assets/img/icons/boleto-icon.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <div class="container">
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+    </div>
 
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/swiper.min.js"></script>
