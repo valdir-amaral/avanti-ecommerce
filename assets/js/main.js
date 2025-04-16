@@ -1,6 +1,23 @@
+window.scrollTo({top: 0})
 let searchInput = document.querySelector('#search-input');
 
+let navToggle = document.querySelector('.nav-toggle');
+navToggle.addEventListener('click', () => {
+
+    let navbarMobile = document.querySelector('.navbar-mobile')
+    navbarMobile.firstElementChild.innerHTML = "";
+    navbarMobile.classList.toggle('show');
+    document.querySelectorAll('.navbar-link').forEach((l, i) => {
+        if (i == 0) return
+        let el = document.createElement('a');
+        el.href = "#";
+        el.innerText = l.innerText;
+        el.classList.add('navbar-link')
+        navbarMobile.firstElementChild.appendChild(el);
+    })
+})
 function search(ev) {
+    let warning = document.querySelector('.input-wrapper span') ? document.querySelector('.input-wrapper span') : document.createElement('span');
     searchInput.classList.remove('invalid-input');
     if (ev.type == 'keydown') {
         // Se não for enter pode continuar digitando
@@ -9,46 +26,66 @@ function search(ev) {
         }
     }
 
+    
+    if (ev.type == 'click' || ev.key == 'Enter') {
+        warning.innerText = `Você pesquisou por ${searchInput.value}`;
+
+    }
     if (searchInput.value.length == 0) {
         searchInput.classList.add('invalid-input');
-        return;
+        warning.innerText = "Por favor, insira uma busca válida."
+        warning.style.color = 'red';
+    } else {
+        warning.style.color = '';
     }
-    
-    alert(`Você pesquisou por ${searchInput.value}`);
+    let inputWrapper = document.querySelector('nav .input-wrapper');
+    inputWrapper.appendChild(warning);
+    searchInput.value = "";
 }
 
 const productButtons = document.querySelectorAll('.product-card button.button');
-console.log(productButtons);
 
 productButtons.forEach(b => b.addEventListener('click', addToCart));
 
-function addToCart(ev) {
-    console.log(ev);
-    let btnSelected = ev.currentTarget;
-    btnSelected.innerHTML = '<span class="loader-product"></span>';
-    btnSelected.setAttribute('disabled', true);
+const collapseButton = document.querySelector("#categories-collapse");
+const dropdownElement = document.querySelector('.dropdown');
 
-    setTimeout(() => {
-        const toastHTML = `
-            <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">Bootstrap</strong>
-                <small>11 mins ago</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-                Hello, world! This is a toast message.
-            </div>
-            </div>
-        `;
+let leftPartDropdown = document.querySelector('.dropdown .left-part');
+let rightPartDropdown = document.querySelector('.dropdown .right-part');
+collapseButton.addEventListener('click', () => {
+    dropdownElement.classList.toggle('hidden');
+    if (document.querySelector('.dropdown h2')) {
+        document.querySelector('.dropdown h2').remove();
+    }
+    leftPartDropdown.style.display = 'block';
+})
 
-        const temp = document.createElement('div');
-        temp.innerHTML = toastHTML;
+const buttonsLeftDropdown = dropdownElement.querySelectorAll('button[data-department]');
 
-        document.body.appendChild(temp.firstElementChild);
+buttonsLeftDropdown.forEach(b => b.addEventListener('mouseover', displayCategory))
+buttonsLeftDropdown.forEach(b => b.addEventListener('click', expandCategory))
+let categoriesSectionList = document.querySelectorAll('.department-content[data-department]');
 
-        btnSelected.setAttribute('disabled',false);
-        btnSelected.innerHTML = "Comprar";
-       
-    }, 800)
+function displayCategory(event) {
+    categoriesSectionList.forEach(i => {
+        i.style.display = 'none';
+        i.style.opacity = 0
+    })
+    let buttonHovered = event.target;
+    let section = Array.from(categoriesSectionList).find(i => i.dataset.department == buttonHovered.dataset.department
+    );
+    section.style.display = 'block'
+    setTimeout(() => section.style.opacity = 1, 100)
+    
+}
+
+function expandCategory(event) {
+    
+    leftPartDropdown.style.display = 'none';
+    let h2 = document.createElement('h2');
+    h2.innerText = event.currentTarget.innerText;
+    let firstChild = rightPartDropdown.querySelector('div');
+
+    firstChild.insertBefore(h2, firstChild.firstElementChild);
+
 }
