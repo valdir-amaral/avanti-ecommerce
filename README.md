@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/1447ab78-6392-4c25-96fb-7c1d10e7e665)
 
+Esse projeto tem como objetivo apresentar uma loja virtual fictícia com sliders, formulários, animações etc. É focado em apresentar uma marca misturando performance e design atraente. 
+
 ## Tecnologias utilizadas:
 - HTML
 - CSS
