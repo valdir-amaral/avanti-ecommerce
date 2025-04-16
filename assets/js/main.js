@@ -1,9 +1,15 @@
-window.scrollTo({top: 0})
+window.scrollTo({
+    top: 0
+})
 let searchInput = document.querySelector('#search-input');
+
+let cartIndicator = document.querySelector('.cart-indicator');
+localStorage.cartItems = localStorage.cartItems ? localStorage.cartItems : 2;
+cartIndicator.innerText = localStorage.cartItems;
+
 
 let navToggle = document.querySelector('.nav-toggle');
 navToggle.addEventListener('click', () => {
-
     let navbarMobile = document.querySelector('.navbar-mobile')
     navbarMobile.firstElementChild.innerHTML = "";
     navbarMobile.classList.toggle('show');
@@ -16,6 +22,7 @@ navToggle.addEventListener('click', () => {
         navbarMobile.firstElementChild.appendChild(el);
     })
 })
+
 function search(ev) {
     let warning = document.querySelector('.input-wrapper span') ? document.querySelector('.input-wrapper span') : document.createElement('span');
     searchInput.classList.remove('invalid-input');
@@ -26,9 +33,9 @@ function search(ev) {
         }
     }
 
-    
+
     if (ev.type == 'click' || ev.key == 'Enter') {
-        warning.innerText = `Você pesquisou por ${searchInput.value}`;
+        warning.innerText = `Você pesquisou por: ${searchInput.value}`;
 
     }
     if (searchInput.value.length == 0) {
@@ -67,20 +74,22 @@ buttonsLeftDropdown.forEach(b => b.addEventListener('click', expandCategory))
 let categoriesSectionList = document.querySelectorAll('.department-content[data-department]');
 
 function displayCategory(event) {
+    buttonsLeftDropdown.forEach(b => b.classList.remove('active'));
+
     categoriesSectionList.forEach(i => {
         i.style.display = 'none';
         i.style.opacity = 0
     })
     let buttonHovered = event.target;
-    let section = Array.from(categoriesSectionList).find(i => i.dataset.department == buttonHovered.dataset.department
-    );
+    buttonHovered.classList.add('active');
+    let section = Array.from(categoriesSectionList).find(i => i.dataset.department == buttonHovered.dataset.department);
     section.style.display = 'block'
     setTimeout(() => section.style.opacity = 1, 100)
-    
+
 }
 
 function expandCategory(event) {
-    
+
     leftPartDropdown.style.display = 'none';
     let h2 = document.createElement('h2');
     h2.innerText = event.currentTarget.innerText;

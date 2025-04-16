@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import url('./loader.css');
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,6 @@ img {
     display: block;
     max-width: 100%;
 }
-
 html {
     overflow-x: hidden;
 }
@@ -35,17 +34,14 @@ a.button, button.button {
     border: none;
     width: 100%;
 }
-
 a.button:hover, button.button:hover {
     color: white;
     opacity: .7;
     transform: translateY(-2px);
 }
-
 .toast-body {
     font-size: 20px;
 }
-
 ul {
     list-style-type: none !important;
 }
@@ -68,13 +64,11 @@ p {
     position: absolute;
     right: 16px;
     top: 9px;
-
 }
 input:hover {
     border-color: #005eff98;
 }
-input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="text"]:focus, input[type="email"]:focus {
     outline: none;
     border-color: #005eff98;
     box-shadow: 0 0 0 .2rem rgba(13,110,253,.25);
@@ -91,6 +85,31 @@ input[type="email"]:focus {
     display: block;
     color: #005CFF;
 }
+.dropdown button.active {
+    color: #005CFF;
+    font-weight: 700;
+}
+.dropdown button {
+    position: relative;
+}
+.dropdown button::after {
+    content: url('../img/icons/arrow.svg');
+    position: absolute;
+    right: 0;
+}
+.dropdown button.active::after {
+    content: url('../img/icons/arrow-blue.svg');
+}
+.dropdown .left-part::-webkit-scrollbar {
+    width: 3px;
+}
+.dropdown .left-part::-webkit-scrollbar-track {
+    background: white;
+}
+.dropdown .left-part::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    border-radius: 6px;
+}
 #main-hero .main-desc {
     color: #005CFF;
     font-size: 25px;
@@ -105,8 +124,7 @@ input[type="email"]:focus {
     font-family: "Nunito";
     font-weight: 700;
 }
-input[type="text"],
-input[type="email"] {
+input[type="text"], input[type="email"] {
     width: 100%;
     border: 1px solid #DDD;
     border-radius: 10px;
@@ -139,7 +157,6 @@ header .banner-warning {
 }
 header nav.navbar {
     padding: 17px 0;
-
 }
 header .profile-info {
     font-size: 14px;
@@ -155,7 +172,6 @@ header .profile-info {
 .container {
     max-width: 1290px !important;
 }
-
 #main-hero {
     padding-top: 160px;
     background-color: #E7E7EA;
@@ -169,8 +185,7 @@ header .profile-info {
 .categories a {
     color: #000;
 }
-.navbar a,
-.navbar-mobile a {
+.navbar a, .navbar-mobile a {
     text-decoration: none;
 }
 a:hover {
@@ -204,19 +219,16 @@ a:hover {
     font-weight: 600;
     text-align: center;
 }
-
 .main-title {
     font-weight: 700;
     font-size: 100px;
 }
-
 .product-card {
     padding: 6px;
     border: 1px solid #DDD;
     border-radius: 10px;
     max-width: 238px;
 }
-
 .product-name {
     margin-bottom: 4px;
     margin-top: 16px;
@@ -224,20 +236,17 @@ a:hover {
     font-weight: 500;
     color: #303030;
 }
-
 .product-old-price {
     color: #303030;
     text-decoration: line-through;
     font-size: 12px;
     font-weight: 400;
 }
-
 .product-price {
     font-weight: 700;
     margin-bottom: 4px;
     color: #000;
 }
-
 .product-parcel {
     font-size: 12px;
     color: #303030;
@@ -254,8 +263,7 @@ a:hover {
 .swiper-pagination-bullet-active {
     background-color: #303030;
 }
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-next, .swiper-button-prev {
     border-radius: 50%;
     border: 1px solid #005CFF;
     background: white;
@@ -281,22 +289,18 @@ a:hover {
     margin-top: -18px;
     content: url('../img/icons/right-arrow.svg');
 }
-
 .banner-mug {
     background-color: #C2C2C2;
     padding: 110px 64px;
 }
-
 #products-section {
     padding-top: 95px;
     padding-bottom: 48px;
 }
-
 #mug-presentation-section {
     padding-top: 48px;
     padding-bottom: 55px;
 }
-
 #mug-presentation-section h2 {
     font-weight: 700;
     font-size: 30px;
@@ -305,7 +309,6 @@ a:hover {
     margin-bottom: 22px;
     font-family: "Nunito", "Nunito Sans", Arial, Helvetica, sans-serif;
 }
-
 #mug-presentation-section p {
     font-size: 18px;
     line-height: 1.4;
@@ -349,12 +352,10 @@ a:hover {
     font-weight: 600;
     color: white;
     text-decoration: underline;
-
 }
 #products-section h2 {
     font-size: 20px;
     font-weight: 700;
-    
 }
 #features-section p {
     font-size: 18px;
@@ -371,7 +372,6 @@ a:hover {
     background-color: #005CFF;
     border-radius: 50%;
 }
-
 #cta-section {
     height: 620px;
     background-image: url('../img/cta-bg.jpg');
@@ -381,7 +381,6 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
-
 #cta-section .banner {
     background-color: #005CFF;
     padding: 55px 12px;
@@ -389,14 +388,12 @@ a:hover {
     color: white;
     margin: auto;
     width: 100%;
-    
 }
 .banner h2 {
     font-size: 30px;
     margin-bottom: 0;
     font-family: "Nunito", "Nunito Sans", Arial, Helvetica, sans-serif;
 }
-
 form {
     gap: 24px;
     align-items: center;
@@ -411,8 +408,7 @@ form input {
 form button {
     max-width: 121px !important;
 }
-form input[type="text"],
-form input[type="email"] {
+form input[type="text"], form input[type="email"] {
     padding: 15px 24px !important;
     height: unset;
 }
@@ -445,151 +441,143 @@ form fieldset label a {
     margin: auto;
     border-radius: 50%;
     background: white;
-    --_m: 
-      conic-gradient(#0000 10%,#000),
-      linear-gradient(#000 0 0) content-box;
+    --_m: conic-gradient(#0000 10%,#000), linear-gradient(#000 0 0) content-box;
     -webkit-mask: var(--_m);
-            mask: var(--_m);
+    mask: var(--_m);
     -webkit-mask-composite: source-out;
-            mask-composite: subtract;
+    mask-composite: subtract;
     animation: l3 1s infinite linear;
-  }
-  @keyframes l3 {to{transform: rotate(1turn)}}
-
-  .toast {
+}
+@keyframes l3 {
+to{
+    transform: rotate(1turn)
+}
+}
+.toast {
     position: fixed;
     right: 16px;
     bottom: 16px;
     z-index: 100;
     opacity: 1 !important;
     background-color: white !important;
-  }
-
-  footer {
+}
+footer {
     padding-top: 64px;
     padding-bottom: 64px;
     background-color: #F5F5F5;
-  }
-  .social-wrapper {
+}
+.social-wrapper {
     display: flex;
     align-items: center;
     gap: 40px;
     margin-top: 40px;
-  }
-  footer .brands-wrapper {
+}
+footer .brands-wrapper {
     margin-top: 67px;
+    flex-wrap: wrap;
     display: flex;
     gap: 34px;
     justify-content: center;
-  }
-
-  footer h4 {
+}
+footer h4 {
     color: black;
     font-size: 16px;
     line-height: 1;
     margin-bottom: 11px;
     font-weight: 700;
-  }
-  footer h5,
-  footer h5 a,
-  footer p {
+}
+footer h5, footer h5 a, footer p {
     color: #303030;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-  }
-
-  footer b {
+}
+footer b {
     font-weight: 700 !important;
-  }
-
-  .final-banner {
+}
+.final-banner {
     padding: 40px 0 63px 0;
     font-size: 12px;
-  }
-  .dropdown {
+}
+.dropdown {
     position: absolute;
     background-color: white;
     width: 100%;
     opacity: 1;
     display: flex;
-    
     top: 45px;
     box-shadow: 0 4px 8px -1px rgba(0, 0, 0, .1);
-  }
-  .department-content {
+}
+.department-content {
     display: none;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-  }
-  .dropdown h2 {
+}
+.dropdown h2 {
     font-size: 16px;
     font-weight: 700;
     color: black;
     margin-bottom: 17px;
-  }
-  .dropdown .right-part a {
+}
+.dropdown .right-part a {
     color: #656565;
 }
-  
-  .dropdown .left-part {
+.dropdown .left-part {
     background-color: #f5f5f5;
     max-width: 234px;
     max-height: 329px;
     overflow: auto;
     height: 100%;
     padding: 20px 27px 11px 16px;
-  }
-  .dropdown .right-part{ 
+}
+.dropdown .right-part{
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 20px 24px 11px 34px;
-  }
-  .dropdown .left-part button {
+}
+.dropdown .left-part button {
     background-color: transparent;
     width: 100%;
     display: block;
-    
     text-align: start;
     margin-bottom: 12px;
-    border: none; 
+    border: none;
     outline: none;
-  }
-  .dropdown.hidden {
+}
+.dropdown.hidden {
     display: none;
     opacity: 0;
-  }
-  .dropdown-categories-wrapper {
+}
+.dropdown-categories-wrapper {
     display: flex;
     gap: 125px;
     justify-content: space-between;
-  }
-  .dropdown-categories-wrapper h3 {
+}
+.dropdown-categories-wrapper h3 {
     color: #005CFF;
     font-weight: 700;
-  }
-  .dropdown-categories-wrapper h3, .dropdown-categories-wrapper a {
+}
+.dropdown-categories-wrapper h3, .dropdown-categories-wrapper a {
     font-size: 16px;
     margin-bottom: 12px;
     display: block;
-  }
-  .partners-wrapper {
+}
+.partners-wrapper {
     display: flex;
     margin-top: 40px;
     justify-content: center;
     gap: 24px;
     align-items: center;
-  }
-  .partners-wrapper .divider {
+}
+.partners-wrapper .divider {
     height: 15px;
     width: 1px;
     display: block;
     background-color: #f5f5f5;
-  }
-
-  .navbar-mobile {
+}
+.navbar-mobile {
     position: absolute;
     width: 100%;
     padding: 0 24px 24px 24px;
@@ -599,11 +587,11 @@ form fieldset label a {
     right: 0;
     background-color: white;
     box-shadow: 0 4px 8px -1px rgba(0, 0, 0, .1);
-  }
-  .navbar-mobile.show {
+}
+.navbar-mobile.show {
     display: block;
-  }
-  @media screen and (max-width: 1600px) {
+}
+@media screen and (max-width: 1600px) {
     #mug-presentation-section img {
         height: 350px;
     }
@@ -615,13 +603,13 @@ form fieldset label a {
         height: 550px;
         margin-left: auto;
     }
-  }
-  @media screen and (min-width: 1301px) {
+}
+@media screen and (min-width: 1301px) {
     .navbar-mobile.show {
         display: none !important;
     }
-  }
-  @media screen and (max-width: 1300px) {
+}
+@media screen and (max-width: 1300px) {
     .main-title {
         font-size: 50px;
         text-align: center;
@@ -660,16 +648,14 @@ form fieldset label a {
     nav ul {
         display: none !important;
     }
-  }
-   
-  @media screen and (max-width: 1100px) {
+}
+@media screen and (max-width: 1100px) {
     section:not(#main-hero) {
         padding-top: 20px !important;
         padding-bottom: 20px !important;
     }
-  }
-
-  @media screen and (max-width:992px) {
+}
+@media screen and (max-width:992px) {
     #main-hero {
         padding-bottom: 54px;
     }
@@ -686,4 +672,34 @@ form fieldset label a {
     form {
         padding: 34px 12px;
     }
-  }
+}
+@media screen and (max-width: 900px) {
+    .input-wrapper {
+        order: 1;
+        margin-top: 28px;
+    }
+}
+@media screen and (max-width: 768px) {
+    footer .row .col-md-3 {
+        display: none;
+    }
+    .accordion {
+        background: transparent;
+        display: block !important;
+    }
+    .accordion-button {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .accordion-button:not(.collapsed) {
+        color: #005CFF;
+    }
+    .accordion-button, .accordion-item {
+        background-color: transparent !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    #main-hero {
+        padding-top: 180px;
+    }
+}

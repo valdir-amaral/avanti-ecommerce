@@ -1,4 +1,4 @@
-let preloader = document.querySelector("#preload");
+let preloader = document.querySelector("#preloader");
 window.onload = loadPage();
 
 function loadPage() {
@@ -7,11 +7,10 @@ function loadPage() {
     })
     document.body.classList.add("loading");
     setTimeout(() => {
-        preloader.classList.add("preloader-invisible");
+        preloader.querySelector('.ctn-preloader').classList.add("loaded");
         setTimeout(() => {
             preloader.remove();
         }, 300);
         document.body.classList.remove("loading");
-
     }, 800)
 }
