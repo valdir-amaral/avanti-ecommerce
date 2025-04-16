@@ -25,13 +25,19 @@ Quando o usuário clica em "comprar", um toast é disparado e o indicador do car
 
 ### Preloader
 
+![Preloader](./assets/img/readme/preloader.gif)
+
 Por uma questão de estilo e performance, é exibida uma tela de carregamento para o usuário antes da página ser acessada.
 
 ### Validação do input de pesquisa
 
+![Validação de input](./assets/img/readme/input.gif)
+
 Quando o usuário tenta pesquisar algo no input da navbar (seja pressionando Enter ou na lupa), o site faz uma verificação se há texto e retorna uma mensagem de erro caso não haja.
 
 ### Navbar destkop
+
+![Navbar](./assets/img/readme/navbar.gif)
 
 Em telas maiores, a navbar é projetada com o mouse over para exibir as categorias de acordo com seus respectivos departamentos. Quando o botão de departamento é clicado, a parte esquerda do menu é ocultada.
 
